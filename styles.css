@@ -1,0 +1,10 @@
+html {
+  scroll-behavior: smooth; /* Efecto suave */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /* Opcional, para un mejor manejo de tamaños */
+    box-sizing: border-box; 
+}

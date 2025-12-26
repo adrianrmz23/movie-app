@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App 🎬</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="relative min-h-screen bg-[#0a0a0c] text-white font-sans selection:bg-purple-500/30 overflow-hidden flex flex-col items-center justify-center px-4">
+    
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[120px] -z-0"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-[120px] -z-0"></div>
+
+    <div class="relative z-10 w-full max-w-8xl flex flex-col items-center">
+        
+        <h1 class="text-white mb-6 text-5xl md:text-7xl font-extrabold tracking-tighter text-center leading-[1.1]">
+            Descubre y 
+            <span class="bg-gradient-to-r from-fuchsia-400 via-purple-500 to-indigo-500 bg-clip-text text-transparent relative">
+                sigue
+                <svg class="absolute -bottom-2 left-0 w-full opacity-50" height="8" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <path d="M0 5 Q 25 0, 50 5 T 100 5" stroke="#a855f7" stroke-width="2" fill="transparent" />
+                </svg>
+            </span> 
+            tus películas
+        </h1>
+
+        <p class="text-zinc-400 mb-10 text-lg md:text-xl font-medium max-w-2xl text-center leading-relaxed">
+            Explora un amplio catálogo de películas y encuentra fácilmente qué ver hoy. 
+            Busca títulos, portadas oficiales y descripciones claras en segundos.
+        </p>
+
+        <form action="" id="formPelicula" class="w-full max-w-2xl relative group">
+            <div class="relative flex items-center">
+                <div class="absolute left-5 text-zinc-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                
+                <input type="text" id="pelicula" 
+                    class="w-full bg-zinc-900/80 border border-zinc-800 text-white text-lg rounded-full py-5 pl-14 pr-40 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500 transition-all shadow-2xl placeholder:text-zinc-600" 
+                    placeholder="Buscar película por título, actor...">
+                
+                <button type="submit" id="buscarPelicula" 
+                    class="absolute right-2 top-2 bottom-2 bg-red-600 hover:bg-red-500 text-white font-bold px-6 rounded-full transition-all flex items-center justify-center active:scale-95">
+                    <span class="hidden md:inline mr-2 text-sm">Buscar</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+            </div>
+        </form>
+
+        <button id="cargarFavoritos" 
+            class="mt-8 flex items-center gap-2 text-zinc-500 hover:text-white transition-colors font-semibold text-sm tracking-wide uppercase">
+            <span class="text-red-500">❤️</span> Mis favoritos
+        </button>
+
+        <p class="mt-6 text-zinc-600 text-[11px] uppercase tracking-widest font-bold">
+            Potenciado por <span class="bg-zinc-800 text-zinc-400 px-2 py-0.5 rounded ml-1">adrianrmz23 <span class="text-purple-500">Github</span></span>
+        </p>
+    </div>
+</div>
+
+    <div id="contenedor" class="bg-[#0a0a0c] container mx-auto p-18 grid grid-cols-1 md:grid-cols-5 lg:grid-cols-6 gap-4">
+        
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
